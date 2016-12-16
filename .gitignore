@@ -1,0 +1,10 @@
+# report and log files
+*.trp
+*.tap
+err.log
+out.log
+# utility files
+play.cmd
+record.cmd
+
+*.user
