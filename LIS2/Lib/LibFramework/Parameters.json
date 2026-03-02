@@ -1,0 +1,20 @@
+{
+	"params": [
+		{
+			"name": "Command Interval",
+			"type": "number",
+			"defaultValue": 100
+		},
+		{
+			"name": "Browser",
+			"type": "browser",
+			"defaultValue": "Selenium - ChromeHeadless"
+		}
+	],
+	"configs": [
+		{
+			"id": "22a923fc",
+			"name": "Default"
+		}
+	]
+}
