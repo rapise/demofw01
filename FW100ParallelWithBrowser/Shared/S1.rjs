@@ -1,0 +1,51 @@
+function Do(){
+
+function pad(num)
+{
+	return (""+(100+num)).substr(1);
+}
+
+var st = new Date();
+var added = 0;
+var reused = 0;
+
+
+for(var a1=0;a1<1;a1++)
+{
+	for(var a2=0;a2<10;a2++)
+	{
+		for(var a3=0;a3<10;a3++)
+		{
+			var path = "TestCases\\F"+pad(a1+1)+"\\G"+pad(a2+1);
+			//var path = "FF"+pad(a1+1)+"\\G"+pad(a2+1);
+			var name = "T"+pad(a1+1)+"G"+pad(a2+1)+"_"+pad(a3+1);
+			var fullPath = path+"\\"+name;
+			var absPath = RapiseApp.GetFramework().FrameworkRoot.GetAbsolutePath(fullPath);
+			if( RapiseApp.GetFramework().FindByAlias(name) ) {
+				WScript.Echo("Already exists: "+absPath);
+				reused++;
+			} else {
+				var srcPath = RapiseApp.GetFramework().FrameworkRoot.GetAbsolutePath("TestCases\\T100\\TPL");
+				var dstPath = RapiseApp.GetFramework().FrameworkRoot.GetAbsolutePath("TestCases\\T100\\"+name);
+				WScript.Echo("Cloning: "+srcPath+" as: "+name + " to: "+dstPath);
+				var cst = new Date()
+				if( RapiseApp.CloneTestCase(srcPath, name) == true )
+				{
+					var moved = RapiseApp.MoveTestCase(dstPath, path);
+					WScript.Echo("Moved: "+moved);
+				}
+				WScript.Echo("in: "+(new Date() - cst ));
+				
+				added++;
+			}
+		}
+	}
+}
+
+WScript.Echo("Added: "+added+" re-used: "+reused+" in: "+(new Date()-st) );
+
+}
+
+if( typeof(g_workDir)=='undefined' ) {
+	Do();
+}

@@ -1,10 +1,8 @@
-# report and log files
-*.trp
-*.tap
-err.log
-out.log
-# utility files
-play.cmd
-record.cmd
-
 *.user
+*.trp
+Reports
+*.log
+*.tap
+Repository.json
+record.cmd
+play.cmd
