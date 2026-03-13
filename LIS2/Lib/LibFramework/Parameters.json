@@ -8,7 +8,7 @@
 		{
 			"name": "Browser",
 			"type": "browser",
-			"defaultValue": "Selenium - Chrome"
+			"defaultValue": "Selenium - ChromeHeadless"
 		}
 	],
 	"configs": [
