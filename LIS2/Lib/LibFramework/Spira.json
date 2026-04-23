@@ -8,17 +8,50 @@
 		{
 			"id": "1DLG2HYE",
 			"spiraId": 294,
-			"properties": []
+			"properties": [
+				{
+					"name": "URL",
+					"value": null
+				},
+				{
+					"name": "Test Type"
+				},
+				{
+					"name": "Review Owner"
+				}
+			]
 		},
 		{
 			"id": "XLY57R8X",
 			"spiraId": 293,
-			"properties": []
+			"properties": [
+				{
+					"name": "URL",
+					"value": null
+				},
+				{
+					"name": "Test Type"
+				},
+				{
+					"name": "Review Owner"
+				}
+			]
 		},
 		{
 			"id": "ALUN1DVM",
 			"spiraId": 292,
-			"properties": []
+			"properties": [
+				{
+					"name": "URL",
+					"value": null
+				},
+				{
+					"name": "Test Type"
+				},
+				{
+					"name": "Review Owner"
+				}
+			]
 		}
 	],
 	"testsets": [
